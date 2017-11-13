@@ -1,0 +1,51 @@
+<html ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>gausala</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/style/w3.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js">
+	</script>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<script src = "bower_components/angular/angular.min.js"></script>
+	<script src= "bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+	<script src="app/app.config.js"></script>
+	<script src="controller/form.controller.js"></script>
+	<script src="controller/login.controller.js"></script>
+	<script src="controller/home.controller.js"></script>
+	<script src="model/app.factory.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+	<div><img width="150px" src="assets/images/cowshed2.png">
+
+	</div>
+	<div class="w3-bar spacex w3-large w3-blue-grey">
+		<a href="#" class="w3-bar-item w3-hover-white w3-button">HOME</a>
+		<a href="#" class="w3-bar-item w3-hover-white w3-button">GAUSALAS</a>
+		<a href="#" class="w3-bar-item w3-hover-white w3-button">ARTICLES</a>
+		<a href="#" class="w3-bar-item w3-hover-white w3-button">NEWS AND EVENTS</a>
+		<a href="#" class="w3-bar-item w3-hover-white w3-button">DONATION</a>
+		<a href="#" class="w3-bar-item w3-hover-white w3-button">ABOUT US</a>
+		<a ui-sref="login" class="w3-right w3-hover-white w3-bar-item w3-button"><i class="fa fa-user" aria-hidden="true"></i> login</a>
+		<a ui-sref="register" class="w3-right w3-hover-white w3-bar-item w3-button"><i class="fa fa-sign-in" aria-hidden="true"></i> sign up</a>
+
+	</div>
+	<div ui-view>
+	</div>
+ 
+
+</body>
+<style>
+.spacex{
+	margin-top: 10px;
+}
+a{
+	font-family: 'Montserrat', sans-serif;
+}
+
+</style>
+</html>

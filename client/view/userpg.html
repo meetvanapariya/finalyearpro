@@ -1,0 +1,31 @@
+<div>
+	<h1 class="w3-center">welcome</h1>
+	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left fontsA" style="display:block" id="mySidebar">
+		<a ui-sref="#" class=" active w3-bar-item w3-button w3-hover-blue-grey">
+		New employee
+		</a>
+		<a ui-sref="casualshoes" class="w3-bar-item w3-button w3-hover-blue-grey">
+		Cow 	
+		</a>
+		<a ui-sref="formalshoes" class="w3-bar-item w3-button w3-hover-blue-grey">
+		Doctor	
+		</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-blue-grey">
+			
+		</a>
+	
+	</div>
+</div>
+<script>
+	function w3_open() {
+		document.getElementById("main").style.marginLeft = "20%";
+		document.getElementById("mySidebar").style.width = "20%";
+		document.getElementById("mySidebar").style.display = "block";
+		
+	}
+	function w3_close() {
+		document.getElementById("main").style.marginLeft = "0%";
+		document.getElementById("mySidebar").style.display = "none";
+		
+	}
+	</script>
