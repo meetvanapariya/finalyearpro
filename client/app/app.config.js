@@ -16,9 +16,9 @@ angular.module("myApp",['ui.router','ngStorage'])
 		templateUrl : 'view/login.html',
 		controller : 'loginCltr'
 	})
-	.state('userpg',{
-		url : '/userpg',
-		templateUrl : 'view/userpg.html'
+	.state('artical',{
+		url : '/artical',
+		templateUrl : 'view/artical.html'
 	})
 	$urlRouterProvider.otherwise('/home');
 }])

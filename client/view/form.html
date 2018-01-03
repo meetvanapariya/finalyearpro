@@ -1,52 +1,23 @@
-<h2 class="w3-margin">New Register:</h2>
-<div>
-	<div>
-		<div class="myForm w3-card-4 w3-white w3-border">
-			<form class="w3-margin" ng-submit="submitData(x)" ng-init="x={}">
-				<p>Gausala Name:</p>
-					<div class="w3-right w3-large">
-						<i class="fa fa-times" ng-if= "result1=='false'"style="color:red"></i>
-						<i class="fa fa-check" ng-if= "result1=='true'"style="color:green"></i>
-					</div>
-				<input class="w3-input w3-round" type="text" placeholder="name" ng-model="x.gname" ng-blur="checkName(x.gname)" required>
-				<br>
-				<p>Gausala Address:</p>
-					<div class="w3-right w3-large">
-						<i class="fa fa-times" ng-if= "result2=='false'"style="color:red"></i>
-						<i class="fa fa-check" ng-if= "result2=='true'"style="color:green"></i>
-					</div>
-				<input class="w3-input w3-round " type="text"  placeholder="address" ng-model="x.gaddress" ng-blur="checkAdd(x.gaddress)"required>
-				<br>
-				<p>Gausala Contact:</p>
-					<div class="w3-right w3-large">
-						<i class="fa fa-times" ng-if= "result3=='false'"style="color:red"></i>
-						<i class="fa fa-check" ng-if= "result3=='true'"style="color:green"></i>
-					</div>
-				<input class="w3-input w3-round " type="text"  placeholder="contact" ng-model="x.contact" ng-blur="checkNo(x.contact)" required>
-				<br>
-				<p>State:</p>
-				<input class="w3-input w3-round " type="text"  placeholder="state" ng-model="x.state" required><br>
-				<p>City:</p>
-				<input class="w3-input w3-round " type="text"  placeholder="city" ng-model="x.city" required><br>
-				<p>Trustee mo:</p>
-				<input class="w3-input w3-round " type="text"  placeholder="mo" ng-model="x.mo" required><br>
-				<p>User name:</p>
-				<p class="w3-text-red" ng-if="usernameAva == 'true'">User name not available</p>
-				<p class="w3-text-green" ng-if="usernameAva == 'false'">User name Available</p>
-				<input class="w3-input w3-round " type="text"  placeholder="username" ng-model="x.usrname" ng-blur="checkUsrName(x.usrname)" required><br>
-				<p class="w3-center w3-margin-top">
-					<button class="w3-btn w3-blue-grey" type="submit">Submit</button>
-				</p>
-			</form>
-		</div>
-	</div>
-</div>	
-<style>
-.myForm{
-	width: 50%;
-}
-p{
-	font-size: 18px;
-}
 
-</style>
+<div class="w3-container">
+  <h2>New Register:</h2>
+
+
+<form class="w3-container" ng-submit="submitData(x)" ng-init="x={}">
+  <p>
+  <label>User Name:</label>
+  <input class="w3-input" type="text" placeholder="user name" ng-model="x.username"></p>
+  <p>
+  <label>Email:</label>
+  <input class="w3-input" type="text" placeholder="email" ng-model="x.email"></p>
+  <p>
+  <label>password:</label>
+  <input class="w3-input" type="password" placeholder="password" ng-model="x.password"></p>
+  <p>
+  <label>contact no:</label>
+  <input class="w3-input" type="text" placeholder="contact no" ng-model="x.contact"></p>
+<p class="w3-center w3-padding">
+<button class="w3-btn w3-green">Submit</button>	
+</p>
+</form>
+</div>

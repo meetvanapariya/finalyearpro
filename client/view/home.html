@@ -25,13 +25,27 @@ button{
 	width: 80px;
 	height: 50px;
 }
+.parallax {
+    background-image: url("assets/images/prlx.jpg");
+
+    min-height: 300px; 
+    opacity: 0.8;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1000;
+}
+.x1{
+  margin-top: -30px;
+}
 </style>
 <div class="row">
 	<div style="height:100vh; height:450px; width:100%; background-image:url({{img}}); background-size:cover; background-position:center center;" >
 		
 	</div>
-	<span ng-click="left()" class="w3-blue w3-circle leftbar"><i class="fa fa-chevron-circle-left w3-xxxlarge " aria-hidden="true"></i></span>
-	<span ng-click="right()" class="rightbar w3-blue w3-circle"> <i class="fa fa-chevron-circle-right w3-xxxlarge " aria-hidden="true"></i></span>
+	<span ng-click="left()" class="w3-black w3-circle leftbar"><i class="fa fa-chevron-circle-left w3-xxxlarge " aria-hidden="true"></i></span>
+	<span ng-click="right()" class="rightbar w3-black w3-circle"> <i class="fa fa-chevron-circle-right w3-xxxlarge " aria-hidden="true"></i></span>
 </div>
  <div class="jumbotron w3-center">
     <h2 class="w3-text-blue-grey">वन्दे गोमातरम् ,</h2>
@@ -43,10 +57,56 @@ button{
 </p> 
 <button class="aboutbtn w3-teal">know more about us</button>
   </div>
-  <div class="w3-center w3-text-blue-grey">
-  	<h1>our services</h1>
-  	<div class="w3-row">
-  		<div class="w3-col s6"><h2>barcode</h2></div>
-  		<div class="w3-col s6">dfgdfg</div>
+  <div class="w3-center x1">
+  	<div class="parallax"> 
+        <h1 class="w3-text-white">informative area</h1>
+        <div class="w3-row">
+          <div class="w3-col s6 "><img  class="w3-round" width="170px" height="170px" src="assets/images/artical.png"></div>
+          <div class="w3-col s6"><img class="w3-round" width="200px" height="200px" src="assets/images/news11.png"></div></div>
+  	
   	</div>
-  </div>	
+  </div>
+  <div class="w3-center">
+    <h1>some of registerd gausalas</h1>
+  </div>
+ <div class=" w3-border">
+      <table class="w3-table-all">  
+        <tr>
+          <th>no</th>
+          <th>Name</th>
+          <th>contact no</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>shrijee gausala</td>
+          <td>8845554578</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>krishna gausala</td>
+          <td>8845554578</td>
+        </tr> 
+        <tr>
+          <td>3</td>
+          <td>govind gausala</td>
+          <td>8845554578</td>
+        </tr>  
+      </table>
+    </div>
+  <div class="w3-margin"id="map" style="height:400px;background:black"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 22.2885846, lng: 70.772579};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDB0k0ZAZgI-EOYbqarRK-Kk4HXHfX1uy0&callback=initMap">
+    </script>

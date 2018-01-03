@@ -20,13 +20,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
-	<div><img width="150px" src="assets/images/cowshed2.png">
+	<div class="w3-center"><img width="150px" src="assets/images/cowshed2.png">
 
 	</div>
-	<div class="w3-bar spacex w3-large w3-blue-grey">
+	<div id="navbar" class="w3-bar w3-card-4 spacex w3-large w3-blue-grey">
 		<a href="#" class="w3-bar-item w3-hover-white w3-button">HOME</a>
 		<a href="#" class="w3-bar-item w3-hover-white w3-button">GAUSALAS</a>
-		<a href="#" class="w3-bar-item w3-hover-white w3-button">ARTICLES</a>
+		<a ui-sref="artical" class="w3-bar-item w3-hover-white w3-button">ARTICLES</a>
 		<a href="#" class="w3-bar-item w3-hover-white w3-button">NEWS AND EVENTS</a>
 		<a href="#" class="w3-bar-item w3-hover-white w3-button">DONATION</a>
 		<a href="#" class="w3-bar-item w3-hover-white w3-button">ABOUT US</a>
@@ -36,7 +36,30 @@
 	</div>
 	<div ui-view>
 	</div>
- 
+ <div class="footerA w3-row">
+ 	<div class="w3-col s6 m6">
+ 		<div class="connect"><p class="w3-text-white ">STAY CONNECTED</p>
+ 		<p class="w3-text-grey">join the community and get daily updates</p>
+ 		<input class="w3-round" width="150px" type="text" placeholder="Email">
+ 		<button class="w3-btn btnsize w3-round w3-small w3-green">Sign-Up></button>	</div>
+ 	</div>
+ 	<div class="w3-col s6 m3">
+ 		<div class="connect2">
+ 		<p class="w3-text-white" style="font-size: 20px">NAVIGATION</p>
+ 		<p><a href="#">Home ></a></p>
+ 		<p><a href="#">Gausala ></a></p>
+ 		<p><a href="#">Articles ></a></p>
+ 		<p><a href="#">News and events ></a></p>
+ 		<p><a href="#">Donation ></a></p>
+ 	</div> 	
+ 	</div>
+ 	<div class="w3-col s12 m3">
+ 		<div class="connect">
+ 			<p class="w3-text-white">ADDRESS</p>
+ 			<p class="w3-text-grey">Near cristall mall,<br>chitrkut dham<br>block no -50</p></div>
+ 	</div>
+ 	<p class="w3-text-grey compnyA">Design by <a href="#">@rao infotech</a></p>
+ </div>
 
 </body>
 <style>
@@ -46,6 +69,42 @@
 a{
 	font-family: 'Montserrat', sans-serif;
 }
-
+.footerA{
+	background-color: #282e34;
+}
+.connect{
+	font-size: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.connect2{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.btnsize{
+	height: 38px;
+}
+.compnyA{
+	margin-top: 200px;	
+	font-size: 25px;
+}
+.sticky {
+  position: fixed;
+  top: -10px;
+  width: 100%;
+}
 </style>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </html>

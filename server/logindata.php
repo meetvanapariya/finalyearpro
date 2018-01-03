@@ -19,21 +19,22 @@ if ($usrname && $password)
 
 				if($row[9] == $password)
 				{
-					echo "true";
+					$rowdata = json_encode($row);
+					echo $rowdata;
 				}
 				else{
-					echo "passwod is wrong";
+					
 				}
 			}
 			else{
-				echo "username is wrong";
+				
 			}
 
 		}
 	}
 
 	else{
-		echo "user does not exist!";
+		
 	}
 }
 ?>
