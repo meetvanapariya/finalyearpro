@@ -14,7 +14,7 @@ angular.module('myApp')
 	obj.submitData = function(arr){
 		var defer = $q.defer();
 		console.log(arr);
-		$http.post("http://localhost/gausala-master/server/clientReg.php",arr)
+		$http.post("http://localhost/gausala-master/server/register.php",arr)
 		.then(function(response){
 			defer.resolve(response);
 		},function(error){

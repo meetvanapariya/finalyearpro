@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html ng-app="myApp">
 <head>
 	<meta charset="UTF-8">
@@ -9,6 +10,7 @@
 	</script>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<!-- components starts -->
 	<script src = "bower_components/angular/angular.min.js"></script>
 	<script src= "bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="bower_components/ngstorage/ngStorage.min.js"></script>
@@ -16,26 +18,37 @@
 	<script src="controller/form.controller.js"></script>
 	<script src="controller/login.controller.js"></script>
 	<script src="controller/home.controller.js"></script>
+	<script src="controller/about.controller.js"></script>
 	<script src="model/app.factory.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
 </head>
 <body>
-	<div class="w3-center"><img width="150px" src="assets/images/cowshed2.png">
-
+	<div class="w3-center">
+		<img width="100px" src="assets/images/cowshed2.png"></a>
 	</div>
-	<div id="navbar" class="w3-bar w3-card-4 spacex w3-large w3-blue-grey">
-		<a href="#" class="w3-bar-item w3-hover-white w3-button">HOME</a>
-		<a href="#" class="w3-bar-item w3-hover-white w3-button">GAUSALAS</a>
-		<a ui-sref="artical" class="w3-bar-item w3-hover-white w3-button">ARTICLES</a>
-		<a href="#" class="w3-bar-item w3-hover-white w3-button">NEWS AND EVENTS</a>
-		<a href="#" class="w3-bar-item w3-hover-white w3-button">DONATION</a>
-		<a href="#" class="w3-bar-item w3-hover-white w3-button">ABOUT US</a>
-		<a ui-sref="login" class="w3-right w3-hover-white w3-bar-item w3-button"><i class="fa fa-user" aria-hidden="true"></i> login</a>
-		<a ui-sref="register" class="w3-right w3-hover-white w3-bar-item w3-button"><i class="fa fa-sign-in" aria-hidden="true"></i> sign up</a>
-
+	<!-- header starts -->
+	<div id="navbar" class="w3-bar w3-card-4 spacex w3-blue-grey">
+		<button ui-sref="home" class="w3-bar-item w3-hover-white w3-button">HOME</button>
+		<button ui-sref="gausala" class="w3-bar-item w3-hover-white w3-button w3-hide-small">GAUSALAS</button>
+		<button ui-sref="artical" class="w3-bar-item w3-hover-white w3-button w3-hide-small">ARTICLES</button>
+		<button href="#" class="w3-bar-item w3-hover-white w3-button w3-hide-small">NEWS AND EVENTS</button>
+		<button href="#" class="w3-bar-item w3-hover-white w3-button w3-hide-small">DONATION</button>
+		<button ui-sref="about" class="w3-bar-item w3-hover-white w3-button w3-hide-small">ABOUT US</button>
+		<button ui-sref="#" class="w3-bar-item w3-right w3-hover-white w3-button w3-hide-large">&#9776;</button>
 	</div>
+	
+
+<!-- div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+</div>
+  -->
+	<!-- view starts -->
 	<div ui-view>
 	</div>
+	<!-- view ends -->
+	<!-- footer starts -->
  <div class="footerA w3-row">
  	<div class="w3-col s6 m6">
  		<div class="connect"><p class="w3-text-white ">STAY CONNECTED</p>
@@ -56,7 +69,7 @@
  	<div class="w3-col s12 m3">
  		<div class="connect">
  			<p class="w3-text-white">ADDRESS</p>
- 			<p class="w3-text-grey">Near cristall mall,<br>chitrkut dham<br>block no -50</p></div>
+ 			<p class="w3-text-grey">Near crystal mall,<br>chitrkut dham<br>block no -50</p></div>
  	</div>
  	<p class="w3-text-grey compnyA">Design by <a href="#">@rao infotech</a></p>
  </div>

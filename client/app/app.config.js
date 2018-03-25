@@ -6,9 +6,13 @@ angular.module("myApp",['ui.router','ngStorage'])
 		templateUrl : 'view/home.html',
 		controller : 'homeCltr'
 	})
+	.state('gausala',{
+		url : '/gausala',
+		templateUrl : 'view/gausala.html'
+	})
 	.state('register',{
 		url : '/register',
-		templateUrl : 'view/form.html',
+		templateUrl : 'view/registerGausala.html',
 		controller : 'registerCltr'
 	})
 	.state('login',{
@@ -20,5 +24,11 @@ angular.module("myApp",['ui.router','ngStorage'])
 		url : '/artical',
 		templateUrl : 'view/artical.html'
 	})
+	.state('about',{
+		url : '/about',
+		templateUrl : 'view/about.html',
+		controller : 'aboutCltr'
+	})
+
 	$urlRouterProvider.otherwise('/home');
 }])
